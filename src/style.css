@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+header {
+    max-height: 100%;
+    min-height: 459px;
+    background-color: #404EED;
+    color: white;
+    padding: 2rem 2rem 0 2rem;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-text h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    font-family: "Luckiest Guy", cursive, sans-serif;
+    letter-spacing: 0.3rem;
+
+}
+
+.header-text p {
+    margin-top: .5rem;
+    max-width: 48rem;
+    font-size: 1.1rem;
+}
+
+
+.header-baixar-button,
+.header-web-button {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    border: none;
+    margin-top: 1.5rem;
+}
+
+.header-baixar-button {
+    background-color: white;
+}
+
+.header-web-button {
+    background-color: #313338;
+    color: white;
+    margin-left: 1.2rem;
+}
+
+#img-header-left {
+    max-width: 100%;
+    margin-top: .3rem;
+}
+
+#img-header-left01 {
+    display: none;
+}
+
+#img-header-right {
+    display: none;
+}
+
+@media screen and (min-width: 992px) {
+    header {
+        max-height: 400px;
+        min-height: 0;
+        display: flex;
+        background-image: url("./img/background-header.PNG");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        justify-content: center;
+        align-items: end;
+        padding: 4rem 2rem 0 2rem;
+    }
+
+    .header-text {
+        display: grid;
+        max-height: 300px;
+        max-width: 2180px;
+        grid-template-columns: 1fr 460px 1fr;
+        grid-template-rows: 49px 69px 1fr;
+        grid-template-areas:
+            "img-left h1 img-right "
+            "img-left p img-right "
+            "img-left botoes img-right"
+        ;
+        column-gap: .5rem;
+    }
+
+    #img-header-left {
+        display: none;
+    }
+
+    #img-header-left01 {
+        max-width: 100%;
+        display: inline-block;
+        grid-area: img-left;
+        justify-self: end;
+        align-self: end;
+        max-height: 100%;
+
+    }
+
+    .header-text h1 {
+        grid-area: h1;
+        font-size: 40px;
+        align-self: flex-end;
+    }
+
+    .header-text p {
+        align-items: center;
+        grid-area: p;
+        font-size: 10px;
+        align-self: flex-end;
+    }
+
+    #img-header-right {
+        max-width: 100%;
+        max-height: 100%;
+        display: inline;
+        grid-area: img-right;
+        align-self: end;
+    }
+
+    .botoes {
+        grid-area: botoes;
+        align-self: start;
+    }
+
+    .header-baixar-button,
+    .header-web-button {
+        padding: .8rem 1.5rem;
+        margin-top: 1rem;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+}
