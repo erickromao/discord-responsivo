@@ -23,6 +23,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .header-text h1 {
@@ -40,29 +41,26 @@ header {
 }
 
 
-.header-baixar-button,
-.header-web-button {
+.header-baixar-playstore-button{
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: bold;
     padding: 1rem 2rem;
     border-radius: 30px;
     border: none;
-    margin-top: 1.5rem;
+    margin: 1.5rem 0 1.5rem 0;
 }
 
 .header-baixar-button {
     background-color: white;
 }
-
-.header-web-button {
-    background-color: #313338;
-    color: white;
-    margin-left: 1.2rem;
+.header-baixar-button, .header-web-button{
+    display:none;
 }
 
 #img-header-left {
-    max-width: 100%;
+    max-width: 45%;
     margin-top: .3rem;
+    margin: auto;
 }
 
 #img-header-left01 {
@@ -142,10 +140,25 @@ header {
 
     .header-baixar-button,
     .header-web-button {
+        display: inline-block;
         padding: .8rem 1.5rem;
         margin-top: 1rem;
         font-size: 10px;
         font-weight: bold;
+        border-radius: 30px;
+        border: none;
     }
 
+.header-baixar-button {
+    background-color: white;
+}
+
+.header-web-button {
+    background-color: #313338;
+    color: white;
+    margin-left: 1.2rem;
+}
+.header-baixar-playstore-button{
+    display:none;
+}
 }
