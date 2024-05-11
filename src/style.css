@@ -91,7 +91,7 @@ header {
         max-height: 300px;
         max-width: 2180px;
         grid-template-columns: 1fr 460px 1fr;
-        grid-template-rows: 49px 69px 1fr;
+        grid-template-rows: 49px 55px 1fr;
         grid-template-areas:
             "img-left h1 img-right "
             "img-left p img-right "
