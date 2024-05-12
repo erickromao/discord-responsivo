@@ -9,14 +9,16 @@
 
 body {
     font-family: "Open Sans", sans-serif;
+
 }
 
+/* Header */
 header {
     max-height: 100%;
-    min-height: 459px;
+    min-height: 28.68rem;
     background-color: #404EED;
     color: white;
-    padding: 2rem 2rem 0 2rem;
+    padding-top: 4rem;
 }
 
 .header-text {
@@ -24,41 +26,50 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    padding: 0 2rem;
 }
 
 .header-text h1 {
-    font-size: 4.5rem;
+    max-width: 100%;
+    font-size: 3.8rem;
     font-weight: 800;
     font-family: "Luckiest Guy", cursive, sans-serif;
     letter-spacing: 0.3rem;
-
 }
 
 .header-text p {
     margin-top: .5rem;
-    max-width: 48rem;
+    max-width: 45rem;
     font-size: 1.1rem;
+    text-align: center;
 }
 
 
-.header-baixar-playstore-button{
+.header-baixar-playstore-button {
     font-size: 1.2rem;
     font-weight: bold;
     padding: 1rem 2rem;
     border-radius: 30px;
     border: none;
-    margin: 1.5rem 0 1.5rem 0;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.header-baixar-playstore-button:hover {
+    cursor: pointer;
 }
 
 .header-baixar-button {
     background-color: white;
 }
-.header-baixar-button, .header-web-button{
-    display:none;
+
+.header-baixar-button,
+.header-web-button {
+    display: none;
 }
 
 #img-header-left {
-    max-width: 45%;
+    max-width: 50%;
     margin-top: .3rem;
     margin: auto;
 }
@@ -71,9 +82,86 @@ header {
     display: none;
 }
 
-@media screen and (min-width: 992px) {
+/* main */
+.sections {
+    display: flex;
+    max-width: 100%;
+    padding: 3.5rem 0;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.sections img {
+    margin: auto;
+    max-width: 100%;
+}
+
+.sections-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    color: #313338;
+}
+
+.sections-text h2 {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.sections-text p {
+    padding-top: 1rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+    color: #44464b;
+}
+
+#section02,
+#section04 {
+    background-color: #e9e8e8;
+}
+
+#section04 {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    padding-bottom: 5rem;
+}
+
+#section04 h2 {
+    font-size: 2.5rem;
+    font-family: "Luckiest Guy", cursive, sans-serif;
+    letter-spacing: 0.2rem;
+    font-weight: 900;
+    max-width: 37rem;
+    margin: auto;
+}
+
+#section04 .sections-text {
+    padding-bottom: 0;
+}
+
+
+/* footer */
+
+footer {
+    display: flex;
+    background-color: #23272A;
+    height: 4rem;
+}
+
+footer img {
+    margin: auto;
+    max-width: 10rem;
+}
+
+
+@media screen and (min-width: 990px) {
+
+    /* header */
     header {
-        max-height: 400px;
+        max-height: 25rem;
         min-height: 0;
         display: flex;
         background-image: url("./img/background-header.PNG");
@@ -81,21 +169,21 @@ header {
         background-position: bottom;
         justify-content: center;
         align-items: end;
-        padding: 4rem 2rem 0 2rem;
+        padding: 6rem 2rem 0 2rem;
     }
 
     .header-text {
         display: grid;
-        max-height: 300px;
-        max-width: 2180px;
-        grid-template-columns: 1fr 460px 1fr;
-        grid-template-rows: 49px 55px 1fr;
+        max-height: 18.75rem;
+        max-width: 136.25rem;
+        grid-template-columns: minmax(auto, 20.20rem) 150px 460px minmax(auto, 20.20rem);
+        grid-template-rows: 65px 80px 1fr;
         grid-template-areas:
-            "img-left h1 img-right "
-            "img-left p img-right "
-            "img-left botoes img-right"
-        ;
+            "h1 h1 h1 h1"
+            "img-left p p img-right "
+            "img-left botoes botoes img-right";
         column-gap: .5rem;
+        padding: 0;
     }
 
     #img-header-left {
@@ -114,16 +202,19 @@ header {
 
     .header-text h1 {
         grid-area: h1;
-        font-size: 40px;
+        font-size: 3.5rem;
         align-self: flex-end;
+        margin: 0 auto .3rem auto;
     }
 
     .header-text p {
-        align-items: center;
         grid-area: p;
-        font-size: 10px;
+        font-size: 0.8rem;
         align-self: flex-end;
+        text-align: center;
+        margin: auto;
     }
+
 
     #img-header-right {
         max-width: 100%;
@@ -134,31 +225,88 @@ header {
     }
 
     .botoes {
+        display: flex;
         grid-area: botoes;
         align-self: start;
+        margin-bottom: 2rem;
+        justify-content: center;
     }
+
+    .header-baixar-button:hover,
+    .header-web-button:hover {
+        cursor: pointer;
+    }
+
 
     .header-baixar-button,
     .header-web-button {
         display: inline-block;
         padding: .8rem 1.5rem;
         margin-top: 1rem;
-        font-size: 10px;
+        font-size: 0.625rem;
         font-weight: bold;
         border-radius: 30px;
         border: none;
     }
 
-.header-baixar-button {
-    background-color: white;
-}
+    .header-baixar-button {
+        background-color: white;
+    }
 
-.header-web-button {
-    background-color: #313338;
-    color: white;
-    margin-left: 1.2rem;
-}
-.header-baixar-playstore-button{
-    display:none;
-}
+    .header-web-button {
+        background-color: #313338;
+        color: white;
+        margin-left: 1.2rem;
+    }
+
+    .header-baixar-playstore-button {
+        display: none;
+    }
+
+    /* Main */
+
+    .sections {
+        flex-wrap: nowrap;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .sections img {
+        margin: 0;
+    }
+
+    .sections:nth-child(4) {
+        flex-direction: column;
+
+    }
+
+    #section04 .sections-text {
+        margin: auto;
+        max-width: 70rem;
+    }
+
+    #section04 .sections-text h2 {
+        max-width: 46.3rem;
+    }
+
+    .sections-text {
+        max-width: 23.75rem;
+    }
+
+    .sections-text h2 {
+        font-size: 2.5rem;
+    }
+
+    #section04 img {
+        margin: auto;
+    }
+
+    #section04 .sections-text p {
+        max-width: 54.28rem;
+    }
+
+    #section04 .sections-text h2 {
+        font-size: 3rem;
+        max-width: 55.29rem;
+    }
 }
